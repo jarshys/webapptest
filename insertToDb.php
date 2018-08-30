@@ -1,14 +1,5 @@
 <?php
 
-	// Define function to handle basic user input
-	function parse_input($data) 
-	{
-		$data = trim($data);
-		$data = stripslashes($data);
-		$data = htmlspecialchars($data);
-		return $data;
-	}
-
 	// Define function to check that inputted expense number has a maximum of 2 decimal places
 	//function validateTwoDecimals($number)
 //	{
@@ -25,11 +16,11 @@
 	$vehicleMake = $vehicleModel = $startDate = $endDate = $employeeName = NULL;
 
 	// Get input variables
-	$vehicleMake= parse_input($_POST['vehicleMake']);
-	$vehicleModel= parse_input($_POST['vehicleModel']);
-	$startDate= (int) parse_input($_POST['startDate']);
-	$endDate= (int) parse_input($_POST['endDate']);
-	$employeeName= parse_input($_POST['employeeName']);
+	$vehicleMake= $_POST['vehicleMake'];
+	$vehicleModel= $_POST['vehicleModel'];
+	$startDate= (int) $_POST['startDate'];
+	$endDate= (int) $_POST['endDate'];
+	$employeeName= $_POST['employeeName'];
 
 	// Get the authentication claims stored in the Token Store after user logins using Azure Active Directory
 
@@ -86,7 +77,7 @@
 				'" . $vehicleModel . "', 
 				'" . $startDate . "', 
 				'" . $endDate . "', 
-				'" . $employeeName . "',')";
+				'" . $employeeName . ")";
 
 		// Run query
 		$sqlQueryStatus= sqlsrv_query($conn, $tsql);
