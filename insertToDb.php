@@ -18,8 +18,8 @@
 	// Get input variables
 	$vehicleMake= $_POST['vehicleMake'];
 	$vehicleModel= $_POST['vehicleModel'];
-	$startDate= $_POST['startDate'];
-	$endDate= $_POST['endDate'];
+	$startDate= $_POST['startDay'];
+	$endDate= $_POST['endDay'];
 	$employeeName= $_POST['employeeName'];
 
 	// Get the authentication claims stored in the Token Store after user logins using Azure Active Directory
