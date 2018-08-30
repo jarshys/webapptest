@@ -25,7 +25,7 @@
 	require 'connectToDatabase.php';
 
 	// Connect to Azure SQL Database
-	$conn = ConnectToDabase();
+	//$conn = ConnectToDabase();
 
 	// Get data for expense categories
 
@@ -36,15 +36,15 @@
 //	}
 
 	// Close SQL database connection
-	sqlsrv_close ($conn);
+	//sqlsrv_close ($conn);
 
 	// Get the session data from the previously selected Expense Month, if it exists
 	session_start();
-//	if ( !empty( $_SESSION['prevSelections'] ))
-//	{ 
-//		$prevSelections = $_SESSION['prevSelections'];
-//		unset ( $_SESSION['prevSelections'] );
-//	}
+	if ( !empty( $_SESSION['prevSelections'] ))
+	{ 
+		$prevSelections = $_SESSION['prevSelections'];
+		unset ( $_SESSION['prevSelections'] );
+	}
 
 	// Extract previously-selected Month and Year
 //	$prevExpenseMonth= $prevSelections['prevExpenseMonth'];
@@ -74,10 +74,10 @@ The PHP script insertToDb.php will be executed after the user clicks "Submit"-->
 		<br>
 		<!-- Text input for the day start and end -->
 		<label>Start Date (MMDDYY):</label>
-		<input type="number" name="startDay" required><br>
+		<input type="text" name="startDay" required><br>
 		<br>
 		<label>End Date (MMDDYY):</label>
-		<input type="number"  name="endDay" required><br>
+		<input type="text"  name="endDay" required><br>
 		<br>
 		<label>Employee Name:</label>
 		<input type="text" name="employeeName" required>
