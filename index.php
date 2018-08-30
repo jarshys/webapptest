@@ -55,7 +55,7 @@
 
 <div class="intro">
 
-	<h2> Input Car Information </h2>
+	<h2> Car Information Form </h2>
 
 	<!-- Display redundant error message on top of webpage if there is an error -->
 	<!--<h3> <span class="error"> <?php echo $prevSelections['errorMessage'] ?> </span> </h3>-->
