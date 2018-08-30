@@ -73,11 +73,12 @@
 				startDate,
 				endDate,
 				employeeName
+				)
 		VALUES ('" . $vehicleMake . "',
 				'" . $vehicleModel . "', 
 				'" . $startDate . "', 
 				'" . $endDate . "', 
-				'" . $employeeName . ")";
+				'" . $employeeName . "')";
 
 		echo $tsql;
 
