@@ -8,7 +8,7 @@ function ConnectToDabase()
 	$connectionOptions = array(
 		"Database" => getenv("databaseName"),
 		"Uid" => getenv("dbUserName"),
-		"PWD" => getenv("Azure123!@#")
+		"PWD" => getenv("dbPassword")
 	);
 
 	// Connect to Azure SQL Database
