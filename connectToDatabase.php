@@ -6,8 +6,8 @@ function ConnectToDabase()
 	/* Further info: https://docs.microsoft.com/en-us/azure/app-service-web/web-sites-configure#application-settings */
 	$serverName = getenv("msSqlServer"); // In the form of: sqlservername.database.windows.net
 	$connectionOptions = array(
-		"Database" => getenv("mydbtestserverluromer.database.windows.net"),
-		"Uid" => getenv("luromer"),
+		"Database" => getenv("databaseName"),
+		"Uid" => getenv("dbUserName"),
 		"PWD" => getenv("Azure123!@#")
 	);
 
