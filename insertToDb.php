@@ -18,8 +18,8 @@
 	// Get input variables
 	$vehicleMake= $_POST['vehicleMake'];
 	$vehicleModel= $_POST['vehicleModel'];
-	$startDate= (int) $_POST['startDate'];
-	$endDate= (int) $_POST['endDate'];
+	$startDate= $_POST['startDate'];
+	$endDate= $_POST['endDate'];
 	$employeeName= $_POST['employeeName'];
 
 	// Get the authentication claims stored in the Token Store after user logins using Azure Active Directory
@@ -79,6 +79,8 @@
 				'" . $endDate . "', 
 				'" . $employeeName . ")";
 
+		echo $tsql;
+
 		// Run query
 		$sqlQueryStatus= sqlsrv_query($conn, $tsql);
 
@@ -102,5 +104,5 @@
 //	$_SESSION['prevSelections'] = $prevSelections;
 
 	/* Redirect browser to home page */
-	header("Location: /"); 
+	// header("Location: /"); 
 ?>
