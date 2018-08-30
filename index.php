@@ -69,10 +69,10 @@ The PHP script insertToDb.php will be executed after the user clicks "Submit"-->
 	<form action="insertToDb.php" method="post">
 
 		<label>Vehicle Make:</label>
-		<input type="string" step="1" name="vehicleMake" required>
+		<input type="string" step="1" name="vehicleMake" required><br>
 
 		<label>Vehicle Model:</label>
-		<input type="string" step="1" name="vehicleModel" required>
+		<input type="string" step="1" name="vehicleModel" required><br>
 
 	
 
@@ -83,8 +83,8 @@ The PHP script insertToDb.php will be executed after the user clicks "Submit"-->
 		<label>End Date (MMDDYY):</label>
 		<input type="number" step="0.01" name="endDay" required><br>
 
-		<label>Vehicle Make:</label>
-		<input type="string" step="1" name="vehicleMake" required>
+		<label>Employee Name:</label>
+		<input type="string" step="1" name="employeeName" required>
 
 		<button type="submit">Submit</button>
 	</form>
