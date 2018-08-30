@@ -80,7 +80,7 @@
 				'" . $endDate . "', 
 				'" . $employeeName . "')";
 
-		echo $tsql;
+	//	echo $tsql;
 
 		// Run query
 		$sqlQueryStatus= sqlsrv_query($conn, $tsql);
