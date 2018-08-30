@@ -80,7 +80,7 @@
 				'" . $endDate . "', 
 				'" . $employeeName . "')";
 
-	//	echo $tsql;
+	//echo $tsql;
 
 		// Run query
 		$sqlQueryStatus= sqlsrv_query($conn, $tsql);
@@ -105,5 +105,5 @@
 //	$_SESSION['prevSelections'] = $prevSelections;
 
 	/* Redirect browser to home page */
-	// header("Location: /"); 
+	 header("Location: /"); 
 ?>
