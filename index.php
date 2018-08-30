@@ -67,20 +67,20 @@ The PHP script insertToDb.php will be executed after the user clicks "Submit"-->
 	<form action="insertToDb.php" method="post">
 
 		<label>Vehicle Make:</label>
-		<input type="text" step="1" name="vehicleMake" required><br>
+		<input type="text"  name="vehicleMake" required><br>
 		<br>
 		<label>Vehicle Model:</label>
-		<input type="text" step="1" name="vehicleModel" required><br>
+		<input type="text" name="vehicleModel" required><br>
 		<br>
 		<!-- Text input for the day start and end -->
 		<label>Start Date (MMDDYY):</label>
-		<input type="number" step="1" name="startDay" required><br>
+		<input type="number" name="startDay" required><br>
 		<br>
 		<label>End Date (MMDDYY):</label>
-		<input type="number" step="1" name="endDay" required><br>
+		<input type="number"  name="endDay" required><br>
 		<br>
 		<label>Employee Name:</label>
-		<input type="text" step="1" name="employeeName" required>
+		<input type="text" name="employeeName" required>
 		<br>
 		<button type="submit">Submit</button>
 	</form>

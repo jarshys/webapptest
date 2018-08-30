@@ -25,22 +25,14 @@
 	$vehicleMake = $vehicleModel = $startDate = $endDate = $employeeName = NULL;
 
 	// Get input variables
-	$vehicleMake= (string) parse_input($_POST['vehicleMake']);
-	$vehicleModel= (string) parse_input($_POST['vehicleModel']);
+	$vehicleMake= parse_input($_POST['vehicleMake']);
+	$vehicleModel= parse_input($_POST['vehicleModel']);
 	$startDate= (int) parse_input($_POST['startDate']);
 	$endDate= (int) parse_input($_POST['endDate']);
-	$employeeName= (string) parse_input($_POST['employeeName']);
+	$employeeName= parse_input($_POST['employeeName']);
 
 	// Get the authentication claims stored in the Token Store after user logins using Azure Active Directory
-	$claims= json_decode($_SERVER['MS_CLIENT_PRINCIPAL'])->claims;
-	foreach($claims as $claim)
-	{		
-		if ( $claim->typ == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress" )
-		{
-			$userEmail= $claim->val;
-			break;
-		}
-	}
+
 
 	///////////////////////////////////////////////////////
 	//////////////////// INPUT VALIDATION /////////////////
